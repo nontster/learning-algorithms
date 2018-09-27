@@ -22,4 +22,18 @@ public class BinarySearch {
 		return -1;
 	}
 
+	public static int recursiveSearch(int x, int p, int r, int[] a) {
+
+		int q = (p+r)/2;
+		
+		if(a[q] < x)
+			recursiveSearch(x, q+1, r, a);
+		else if(a[q] > x)
+			recursiveSearch(x, p, q-1, a);
+		else
+			return q;
+		
+		return -1;
+		
+	}
 }

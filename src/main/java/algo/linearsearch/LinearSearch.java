@@ -10,4 +10,13 @@ public class LinearSearch {
 		}
 		return -1;
 	}
+	
+	public static int recursiveSearch(int[]a, int i, int x) {
+		if(i > a.length-1)
+			return -1;
+		else if (a[i] == x)
+			return i;
+		else
+			return recursiveSearch(a, i+1, x);
+	}
 }
